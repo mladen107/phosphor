@@ -1,5 +1,5 @@
 {
-  "name": "phosphor",
+  "name": "dcv/phosphor",
   "version": "0.6.1",
   "description": "The PhosphorJS libary.",
   "dependencies": {},
