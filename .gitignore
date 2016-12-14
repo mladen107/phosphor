@@ -8,3 +8,4 @@ example/bundle.js
 example/index.js
 test/build
 test/coverage
+.idea/
