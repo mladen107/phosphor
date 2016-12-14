@@ -529,7 +529,11 @@ class DockPanel extends Widget {
    * Handle the `'p-dragleave'` event for the dock panel.
    */
   private _evtDragLeave(event: IDragEvent): void {
-    // Always mark the event as handled.
+    // Bail if MIME is not correct
+    if (!event.mimeData.hasData(FACTORY_MIME)) {
+      return;
+    }
+
     event.preventDefault();
     event.stopPropagation();
 
@@ -546,7 +550,11 @@ class DockPanel extends Widget {
    * Handle the `'p-dragover'` event for the dock panel.
    */
   private _evtDragOver(event: IDragEvent): void {
-    // Always mark the event as handled.
+    // Bail if MIME is not correct
+    if (!event.mimeData.hasData(FACTORY_MIME)) {
+      return;
+    }
+
     event.preventDefault();
     event.stopPropagation();
 
@@ -563,7 +571,11 @@ class DockPanel extends Widget {
    * Handle the `'p-drop'` event for the dock panel.
    */
   private _evtDrop(event: IDragEvent): void {
-    // Always mark the event as handled.
+    // Bail if MIME is not correct
+    if (!event.mimeData.hasData(FACTORY_MIME)) {
+      return;
+    }
+
     event.preventDefault();
     event.stopPropagation();
 
